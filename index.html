@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      .navbar-transparent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 10;
+        backdrop-filter: blur(5px);
+      }
+      body {
+        background-color: #111;
+        color: white;
+      }
+
+      .navbar {
+        background-color: #000;
+      }
+
+      .navbar-brand img {
+        height: 40px;
+      }
+
+      .banner {
+        background-image: url('Imagenes/partner3.png');
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .banner-overlay {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 30px;
+        max-width: 500px;
+        margin-left: 50px;
+        border-radius: 10px;
+      }
+      .miniatura{
+          position: relative;
+          overflow: hidden;
+      }
+      .miniatura img {
+          height: auto;
+          width: 100%;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .miniatura img:hover {
+        transform: scale(1.05);
+      }
+
+      .row {
+        margin-bottom: 30px;
+      }
+
+      .banner-buttons .btn {
+        margin-right: 10px;
+      }
+      #main-image{
+          width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark px-4 navbar-transparent">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg"
+          alt="Netflix Logo"
+        />
+      </a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="#">TV Shows</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">New & Popular</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">My List</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Browse by Language</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <a href="#" role="button" class="me-3 text-white"
+            ><i class="bi bi-search"></i
+          ></a>
+          <a href="#" role="button" class="me-3 text-white"
+            ><i class="bi bi-bell"></i
+          ></a>
+          <a
+            href="https://stefano-gac.github.io/Pagina_Formulario/"
+            role="button"
+            class="text-white"
+          >
+            <i class="bi bi-person-circle"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="banner" id="hero">
+      <div class="banner-overlay text-white">
+        <h2 id="main-title">Partner Track</h2>
+        <p id="main-desc">
+          En una firma de abogados en NYC, Ingrid Yun lucha por sus principios
+          mientras equilibra romance, amistades y expectativas familiares.
+        </p>
+        <p id="main-duracion">Duración: 45 min</p>
+        <div class="banner-buttons mt-3">
+          <button class="btn btn-light text-dark fw-bold px-4">▶ Play</button>
+          <button class="btn btn-secondary text-white fw-bold px-4">
+            Más info
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-fluid mt-5">
+      <h4 class="text-white mb-3 ms-3">Mi Lista</h4>
+      <div class="row flex-nowrap overflow-auto px-3">
+        <div
+          class="col-2 miniatura"
+          data-titulo="Cobra Kai"
+          data-desc="Karate y drama en California. Alcohólico y harto de vivir a la sombra de Daniel, su antiguo rival, Johnny toca fondo y decide reabrir el dojo de karate Cobra Kai"
+          data-duracion="30 min"
+          data-bg="Imagenes/cobrakai3.png"
+        >
+          <img src="Imagenes/cobrakai2.png" class="img-fluid" alt="Cobra Kai" />
+        </div>
+        <div class="col-2 miniatura container-fluid" data-titulo="Outlander"
+        data-desc="Viajes en el tiempo y amor. Outlander es una serie de
+        televisión británica-estadounidense de drama histórico basada en la saga
+        de novelas homónima de Diana Gabaldon" data-duracion="50 min"
+        data-bg="Imagenes/outlander3.png"">
+        <img src="Imagenes/outlander2.png" class="img-fluid" alt="Outlander" />
+      </div>
+      <div
+        class="col-2 miniatura"
+        data-titulo="Emily in Paris"
+        data-desc="Moda y cultura en París. Parte de la premisa de una joven y entusiasta publicista norteamericana (Collins) que es enviada por su empresa a trabajar en una filial francesa."
+        data-duracion="25 min"
+        data-bg="Imagenes/emily3.png"
+      >
+        <img src="Imagenes/emily2.png" class="img-fluid" alt="Emily in Paris" />
+      </div>
+      <div
+        class="col-2 miniatura"
+        data-titulo="Partner Track"
+        data-desc="En una firma de abogados en NYC, Ingrid Yun lucha por sus principios mientras equilibra romance, amistades y expectativas familiares."
+        data-duracion="45 min"
+        data-bg="Imagenes/partner3.png"
+      >
+        <img
+          src="Imagenes/partner2.png"
+          class="img-fluid"
+          alt="Partner Track"
+        />
+      </div>
+      <div
+        class="col-2 miniatura"
+        data-titulo="Devil in ohio"
+        data-desc="Una psiquiatra dispuesta a proteger a una joven paciente que huyó de una misteriosa secta, acoge a la chica y, al hacerlo, arriesga su propia vida y la de su familia"
+        data-duracion="45 min"
+        data-bg="Imagenes/devil3.png"
+      >
+        <img src="Imagenes/devil2.png" class="img-fluid" alt="Devil in ohio" />
+      </div>
+      <div
+        class="col-2 miniatura"
+        data-titulo="Call the midwife"
+        data-desc="Inspirada en las memorias de Jennifer Worth, Llama a la Partera sigue a las enfermeras, parteras y monjas de la Casa Nonnatus, quienes visitan a las futuras madres de Poplar, brindándoles a las mujeres más necesitadas la mejor atención posible"
+        data-duracion="45 min"
+        data-bg="Imagenes/midwife3.png"
+      >
+        <img
+          src="Imagenes/midwife2.png"
+          class="img-fluid"
+          alt="Call the midwife"
+        />
+      </div>
+    </div>
+
+    <h4 class="text-white mt-5 mb-3 ms-3">TV Dramas</h4>
+    <div class="row flex-nowrap overflow-auto px-3">
+      <div
+        class="col-2 miniatura"
+        data-titulo="The Crown"
+        data-desc="La historia de la Reina Isabel II."
+        data-duracion="60 min"
+        data-bg="Imagenes/thecrow3.png"
+      >
+        <img src="Imagenes/thecrow2.png" class="img-fluid" alt="The Crown" />
+      </div>
+      <div class="col-2 miniatura" data-titulo="Babylon Berlin"
+      data-desc="Berlín en los años 20" data-duracion="55 min"
+      data-bg="Imagenes/babylon3.png"">
+      <img src="Imagenes/babylon2.png" class="img-fluid" alt="Babylon Berlin" />
+    </div>
+    <div
+      class="col-2 miniatura"
+      data-titulo="After Life"
+      data-desc="Superar la pérdida con humor negro."
+      data-duracion="35 min"
+      data-bg="Imagenes/afterlife3.png"
+    >
+      <img src="Imagenes/afterlife2.png" class="img-fluid" alt="After Life" />
+    </div>
+    <div
+      class="col-2 miniatura"
+      data-titulo="in the dark"
+      data-desc="In the Dark (o En la Oscuridad en español) es una serie de televisión de comedia dramática y misterio que sigue a Murphy, una joven ciega, mientras investiga el asesinato de su amigo."
+      data-duracion="35 min"
+      data-bg="Imagenes/dark3.png"
+    >
+      <img src="Imagenes/dark2.png" class="img-fluid" alt="in the dark" />
+    </div>
+    <div
+      class="col-2 miniatura"
+      data-titulo="que paso ayer"
+      data-desc="Cuatro amigos celebran la despedida de soltero de uno de ellos en Las Vegas. Pero, cuando a la mañana siguiente no pueden encontrar al novio y no recuerdan nada, deberán intentar volver sobre sus pasos, antes de que llegue la hora de la boda."
+      data-duracion="35 min"
+      data-bg="Imagenes/quepaso3.png"
+    >
+      <img src="Imagenes/quepaso2.png" class="img-fluid" alt="que paso ayer" />
+    </div>
+    <div
+      class="col-2 miniatura"
+      data-titulo="proyectox"
+      data-desc="Tres amigos del instituto deciden organizar una fiesta salvaje en casa de uno de ellos, aprovechando que sus padres no están."
+      data-duracion="35 min"
+      data-bg="Imagenes/proyectox3.png"
+    >
+      <img src="Imagenes/proyectox2.png" class="img-fluid" alt="proyectox" />
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+              $(document).ready(function() {
+          $('.miniatura').click(function() {
+              const titulo = $(this).attr('data-titulo');
+              const descripcion = $(this).attr('data-desc');
+              const duracion = $(this).attr('data-duracion');
+              const bg = $(this).attr('data-bg');
+              const imgSrc = $(this).find('img').attr('src');
+
+              $('#main-title').text(titulo);
+              $('#main-desc').text(descripcion);
+              $('#main-duracion').text('Duración: ' + duracion);
+
+              $('#hero').css('background-image', `url('${bg}')`);
+
+              $('#main-image').attr('src', imgSrc);
+          });
+      });
+    </script>
+  </body>
+</html>
